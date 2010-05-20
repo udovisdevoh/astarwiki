@@ -38,7 +38,7 @@ namespace GridAStar
         public void GetAdjacentStates(PathNode<string> node, List<AdjacentState<string>> adjacentStates)
         {
             foreach (string pageLink in GetPageLinks(node.State))
-                adjacentStates.Add(new AdjacentState<string>(pageLink, 0));
+                adjacentStates.Add(new AdjacentState<string>(pageLink, 1));
         }
 
         public float EstimateCostToDestination(string pageName)
